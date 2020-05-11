@@ -1,0 +1,31 @@
+//Jumping on the Clouds
+
+int jumpingOnClouds(vector<int> c) {
+    int next,nextToNext,i=0,count=0;
+    int n=c.size();
+  while(i<n-1)
+  {
+      next=c[i+1];
+      nextToNext=c[i+2];
+      if(next==nextToNext)
+      {
+          i+=2;
+          count+=1;
+      }
+      else{
+          if(next<nextToNext)
+          {
+              i++;
+               count+=1;
+
+          }
+          if(next>nextToNext)
+          {
+              i+=2;
+               count+=1;
+          }
+      }
+     
+  }
+ return count;
+}
