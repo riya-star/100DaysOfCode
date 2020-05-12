@@ -1,0 +1,57 @@
+//Repeated string
+
+long repeatedString(string s, long n) {
+    long res,i=0,extraval=0;
+    int c=s.length();
+    if(c==1)
+    {
+        if(s[0]=='a')
+        {
+            return n;
+        }
+        return 0;
+    }
+    else
+    if(n<=c)
+    {
+
+         int d=0;
+          for(int j=0;j<n;j++)
+          {
+              if(s[j]=='a')
+              {
+                 d++ ;
+              }
+              
+          }
+          res=d;
+      return res;
+    }
+    else
+    {
+          for(int j=0;j<c;j++)
+          {
+              if(s[j]=='a')
+              {
+                  i++;
+              }
+
+          }
+         long r1=(n/c);
+         long r2=(n%c);
+        
+        
+              for(int j=0;j<r2;j++)
+          {
+              if(s[j]=='a')
+              {
+                  extraval++;
+              }
+          }
+          res=((i*r1)+extraval);
+          return res;
+         
+    
+         
+    }
+}
