@@ -1,0 +1,21 @@
+ //Complete the countingValleys function below.
+int countingValleys(int n, string s) {
+    int count=0,j=0;
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]=='U')
+        {
+            j++;
+            if(j==0)
+            {
+                count++;
+            }
+        }
+        else
+        {
+            j--;
+        }
+    }
+   
+   return count;
+}
