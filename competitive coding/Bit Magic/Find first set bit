@@ -1,0 +1,60 @@
+//Initial Template for C++
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+ // } Driver Code Ends
+//User function Template for C++
+
+/*  function to find position of first set 
+    bit in the given number
+ * n: given input for which we want to get
+      the position of first set bit
+ */
+unsigned int getFirstSetBit(int n){
+    int temp=0,count=1;
+    if(n==0)
+    {
+        return 0;
+    }
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    { while(temp==0)
+     {
+        temp=n&1;
+        if(temp==0)
+        {
+            count++;
+            n=n>>1;
+        }
+     }  
+    }
+   
+    return count;
+    
+    // Your code here
+    
+    
+}
+
+// { Driver Code Starts.
+
+// Driver code
+int main()
+{
+    int t;
+    cin>>t; // testcases
+    while(t--)
+    {
+        int n;
+        cin>>n; //input n
+        printf("%u\n", getFirstSetBit(n)); // function to get answer
+    }
+	return 0;
+}
+  // } Driver Code Ends
