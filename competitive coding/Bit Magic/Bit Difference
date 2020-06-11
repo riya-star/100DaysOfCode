@@ -1,0 +1,41 @@
+//Initial Template for C++
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+ // } Driver Code Ends
+//User function Template for C++
+
+// Function to find number of bits to be flip
+// to convert A to B
+int countBitsFlip(int a, int b){
+    int t,check=0,count=0;
+    t=a^b;
+    while(t>0)
+    {
+        t=t&(t-1);
+        count++; 
+    }
+    
+    return count;
+    // Your logic here
+    
+}
+
+// { Driver Code Starts.
+
+// Driver Code
+int main()
+{
+	int t;
+	cin>>t;// input the testcases
+	while(t--) //while testcases exist
+	{
+		int a,b;
+		cin>>a>>b; //input a and b
+
+		cout<<countBitsFlip(a, b)<<endl;
+	}
+	return 0;
+}  // } Driver Code Ends
