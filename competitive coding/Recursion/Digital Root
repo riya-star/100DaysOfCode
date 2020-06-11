@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+
+ // } Driver Code Ends
+//User function Template for C++
+
+//Complete this function
+int digitalRoot(int n)
+{
+    if(n<10)
+    {
+        return n;
+    }
+    else
+    {
+        return digitalRoot((n%10)+digitalRoot(n/10));
+    }//Your code here
+
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--)
+	{
+	    int n;
+	    cin>>n;
+	    
+	    cout<<digitalRoot(n)<<endl;
+	    
+	    
+	}
+	return 0;
+}  // } Driver Code Ends
