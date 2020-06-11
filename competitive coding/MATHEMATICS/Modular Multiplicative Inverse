@@ -1,0 +1,48 @@
+//Initial Template for C++
+
+#include<iostream>
+using namespace std;
+
+
+ // } Driver Code Ends
+//User function Template for C++
+
+//Complete this function
+int modInverse(int a, int m)
+{
+   int i=1,check=0,flag=0;
+   
+   while(i<m)
+   {
+    if((a*i)%m==1)
+    {
+        flag=1;
+        break;
+    }
+    i++;
+   }
+   if(flag==0)
+   {
+       return -1;
+   }
+   else
+   {
+       return i;
+   }
+   
+  //Your code here
+}
+
+// { Driver Code Starts.
+
+int main()
+{
+	int T;
+	cin>>T;
+	while(T--){
+		int a,m;
+		cin>>a>>m;
+		cout << modInverse(a, m)<<endl;
+	}
+    return 0;
+}  // } Driver Code Ends
