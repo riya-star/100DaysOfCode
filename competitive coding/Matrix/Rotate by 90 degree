@@ -1,0 +1,25 @@
+/*  Function to rotate matrix by 90 degrees
+*   n: input for matrix size
+*   N: size defined globally
+*/
+void rotateby90(int n, int a[][N]){
+    
+   for(int i=0;i<n;i++)
+   {
+       for(int j=i+1;j<n;j++)
+       {
+           swap(a[i][j],a[j][i]);
+       }
+   }
+   int l=0,h=n-1;
+   while(l<h)
+   {
+       for(int j=0;j<n;j++)
+       {
+           swap(a[l][j],a[h][j]);
+       }
+       l++;
+       h--;
+   }
+    
+}
