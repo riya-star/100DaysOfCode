@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the beautifulDays function below.
+int beautifulDays(int i, int j, int k) {
+    int count =0 ;
+    for(int eg=i;eg<=j;eg++)
+    {
+        int temp = eg;
+        int rev=0,rem=0;
+        while(temp!=0)
+        {
+            rem=temp%10;
+            rev=(rev*10) +rem;
+            temp=temp/10;
+        }
+        if(((abs(eg-rev))%k)==0)
+        {
+            count++;
+        }
+    }
+    return count;
+
+
+}
