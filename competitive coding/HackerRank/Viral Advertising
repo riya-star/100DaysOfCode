@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the viralAdvertising function below.
+int viralAdvertising(int n) {
+    int f= 5,sum=2;
+    for(int i=1;i<n;i++)
+    {
+        f = (floor(f/2))*3;
+        sum+= floor(f/2);
+        
+    }
+return sum;
+
+}
