@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the jumpingOnClouds function below.
+int jumpingOnClouds(vector<int> c, int k) {
+    int pos=0,e=100;
+    int n=c.size();
+    int count=0;
+   
+    do
+    {
+        pos=(pos+k)%n;
+        if(c[pos]==1)
+        {
+            e=e-2;
+        }
+        count++;
+        
+    }while(pos!=0);
+    e=e-count;
+    return e;
+
+
+}
